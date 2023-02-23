@@ -27,43 +27,39 @@ td {
 
 nav {
   display: flex;
+  /* justify-content: space-between; */
   justify-content: flex-end;
-  gap: 30px;
-  margin: 20px 80px;
-  /* border: 1px solid red; */
+  gap: 20px;
+  align-items: center;
+  padding: 20px 80px;
   font-family: var(--Open-sans);
 }
-/* select {
-  padding: 10px;
-  border: none;
-  border-radius: 1px;
-  font-size: 16px;
-  margin-bottom: 20px;
-  width: 300px;
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+  z-index: 100;
 }
 
-option {
-  padding: 10px;
-  background-color: white;
-  color: #444;
-} */
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #000;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
 
 .pages {
   display: flex;
   gap: 15px;
   align-items: center;
-  margin-top: 15px;
-}
-.h4__style {
-  font-family: var(--Open-sans);
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-.font__fam {
-  font-family: var(--Open-sans);
-}
-
-.pages {
   font-size: 1.5rem;
   color: var(--primary-color);
   font-family: var(--Open-sans);
@@ -72,6 +68,7 @@ option {
 .pages span i {
   color: var(--secondary-color);
 }
+
 .pages span:hover {
   color: white;
   background-color: var(--sixth-color);
@@ -101,7 +98,7 @@ option {
 
 .left {
   width: 50%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   box-sizing: border-box;
   height: auto;
 }
@@ -152,11 +149,11 @@ option {
 }
 
 .right {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 50%;
 }
 .buttons {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   justify-content: flex-end;
   gap: 10px;
@@ -220,7 +217,7 @@ td {
 
  }
 .checkbox-container {
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   display: flex;
   align-items: center;
   gap: 10px;
@@ -252,7 +249,7 @@ td {
 }
 .details {
   margin-top: 40px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 50%;
   line-height: 30px;
   font-family: var(--Open-sans);
@@ -423,6 +420,41 @@ td {
   .main {
     padding: 0 20px;
     
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px;
+  }
+
+  .pages {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--primary-color);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    z-index: 1;
+  }
+
+  .pages span {
+    margin-bottom: 15px;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .paths{
+    display: none;
   }
 
 }

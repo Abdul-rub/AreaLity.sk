@@ -36,10 +36,17 @@
           <option value="slovensky">English</option>
           <option value="slovensky">Magyar</option>
         </select>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
+      
       <div class="logo">
         <img src="https://www.areality.sk/img/logo_reality.png" alt="logo" />
       </div>
+      
       <div class="pages">
         <span><i class="fa fa-home" aria-hidden="true"></i>Nehnutelnosti</span>
         <span>Realitné kancelárie</span>
@@ -395,3 +402,11 @@
     </div>
   </body>
 </html>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+const pages = document.querySelector('.pages');
+
+hamburger.addEventListener('click', () => {
+  pages.classList.toggle('show');
+});
+</script>
